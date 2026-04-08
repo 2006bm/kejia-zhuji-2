@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://s6glhu84wp6r"]
+
+[ext_resource type="Script" uid="uid://cua5im7slbiuw" path="res://scenes/tulou_interior.gd" id="1_2do7m"]
+[ext_resource type="Texture2D" uid="uid://vqyluqdg32np" path="res://image/场景六/WPS图片(1).jpeg" id="1_us0q7"]
+[ext_resource type="VideoStream" uid="uid://cwviikmpxvxq6" path="res://videos/场景六.ogv" id="2_6xxsv"]
+[ext_resource type="PackedScene" uid="uid://bn2ftyteo6soi" path="res://dialog5.tscn" id="2_78g7m"]
+[ext_resource type="Texture2D" uid="uid://d1hkjfwxkgh7f" path="res://image/场景六/内部.jpeg" id="3_2do7m"]
+[ext_resource type="Texture2D" uid="uid://bxmpua26ce03r" path="res://image/ip形象/小女孩2.png" id="6_1h0t5"]
+[ext_resource type="Texture2D" uid="uid://cuc4kayt1mpxg" path="res://image/ip形象/小雕4.png" id="6_ltw8m"]
+
+[node name="TulouInterior" type="Node2D"]
+script = ExtResource("1_2do7m")
+
+[node name="DoorPanel" type="Sprite2D" parent="."]
+position = Vector2(638, 356)
+texture = ExtResource("1_us0q7")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_6xxsv")
+expand = true
+
+[node name="CourtyardBackground" type="Sprite2D" parent="."]
+position = Vector2(635.00006, 354.00003)
+scale = Vector2(0.5404863, 0.5301205)
+texture = ExtResource("3_2do7m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("2_78g7m")]
+
+[node name="NextButton" parent="CanvasLayer/Control/DialoguePanel" index="3"]
+offset_left = 1148.0
+offset_top = 150.0
+offset_right = 1263.0
+offset_bottom = 212.0
+
+[node name="Mink" parent="CanvasLayer/Control" index="2"]
+offset_left = -19.0
+offset_top = -41.0
+offset_right = 214.0
+offset_bottom = 233.0
+texture = ExtResource("6_ltw8m")
+
+[node name="Protagonist" parent="CanvasLayer/Control" index="3"]
+offset_left = 960.0
+offset_top = -173.0
+offset_right = 1185.0
+offset_bottom = 242.0
+texture = ExtResource("6_1h0t5")
+
+[connection signal="pressed" from="CanvasLayer/Control/DialoguePanel/NextButton" to="." method="_on_next_button_pressed"]
+
+[editable path="CanvasLayer/Control"]

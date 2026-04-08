@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://bchkvih83y246"]
+
+[ext_resource type="Texture2D" uid="uid://bxojbjwl50qu" path="res://image/场景四阶段四/a7faf98017004085b497c9568e1b7545.jpeg~tplv-a9rns2rl98-downsize_watermark_1_6_b.png" id="1_ssfsd"]
+[ext_resource type="Texture2D" uid="uid://bloxkvr33etu6" path="res://image/场景四阶段四/2692f84da1154672a5d4b9a2b6bff77c.jpeg~tplv-a9rns2rl98-downsize_watermark_1_6_b.png" id="2_jgfml"]
+[ext_resource type="Texture2D" uid="uid://chkkdog4g1ih" path="res://image/场景四阶段四/20c3c9ec814f4cd8b2a68eed5f0f2ed4.jpeg~tplv-a9rns2rl98-image_pre_watermark_1_6b.png" id="3_kowvx"]
+[ext_resource type="Texture2D" uid="uid://coleps3lq68ge" path="res://image/场景四阶段四/d6581d6472ac4a99971a39dba4ed5fb3.jpeg~tplv-a9rns2rl98-downsize_watermark_1_6_b.png" id="4_pyxdx"]
+[ext_resource type="Texture2D" uid="uid://b467ij52a4s6n" path="res://image/场景四阶段四/d8f8b55b72ae4a219a440c6fed79fe47.jpeg~tplv-a9rns2rl98-downsize_watermark_1_6_b.png" id="5_ninwo"]
+[ext_resource type="Texture2D" uid="uid://b578vunjqage0" path="res://image/场景四阶段四/77b38f95faed4f9e8c24811bc1b7b624.jpeg~tplv-a9rns2rl98-downsize_watermark_1_6_b.png" id="6_f3rtg"]
+[ext_resource type="Texture2D" uid="uid://di252srj5cll5" path="res://image/场景四阶段四/8a300a7ec74f47df93ad3d24ea04883e.jpeg~tplv-a9rns2rl98-downsize_watermark_1_6_b.png" id="7_lqyu8"]
+
+[node name="Stage4Roof" type="Control" unique_id=2031818051]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=707284469]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_ssfsd")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="HouseBody" type="TextureRect" parent="." unique_id=1579876204]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_jgfml")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="RoofBase" type="TextureRect" parent="." unique_id=444906589]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("3_kowvx")
+expand_mode = 1
+
+[node name="TileGuide" type="TextureRect" parent="." unique_id=341081047]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("3_kowvx")
+expand_mode = 1
+
+[node name="TileSlots" type="Control" parent="." unique_id=304049909]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot1" type="TextureRect" parent="TileSlots" unique_id=370491164]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="TileSlots" unique_id=1010337897]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="TileSlots" unique_id=670240607]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="TileSlots" unique_id=136000800]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot5" type="TextureRect" parent="TileSlots" unique_id=231041257]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot6" type="TextureRect" parent="TileSlots" unique_id=1252708596]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot7" type="TextureRect" parent="TileSlots" unique_id=92790442]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Slot8" type="TextureRect" parent="TileSlots" unique_id=1739925628]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="TileLayer" type="Control" parent="." unique_id=941610148]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tile1" type="TextureRect" parent="TileLayer" unique_id=668004877]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile2" type="TextureRect" parent="TileLayer" unique_id=1336975511]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile3" type="TextureRect" parent="TileLayer" unique_id=1972771614]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile4" type="TextureRect" parent="TileLayer" unique_id=2125534357]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile5" type="TextureRect" parent="TileLayer" unique_id=1636007628]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile6" type="TextureRect" parent="TileLayer" unique_id=1269362292]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile7" type="TextureRect" parent="TileLayer" unique_id=2061987721]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="Tile8" type="TextureRect" parent="TileLayer" unique_id=1631522824]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 0
+texture = ExtResource("4_pyxdx")
+expand_mode = 1
+
+[node name="BaodingSlot" type="TextureRect" parent="." unique_id=74824245]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("5_ninwo")
+expand_mode = 1
+
+[node name="BaodingItem" type="TextureRect" parent="." unique_id=945957547]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("5_ninwo")
+expand_mode = 1
+
+[node name="CompletedRoof" type="TextureRect" parent="." unique_id=610623517]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_kowvx")
+expand_mode = 1
+
+[node name="RoofGlow" type="TextureRect" parent="." unique_id=552315008]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_kowvx")
+expand_mode = 1
+
+[node name="Ferret" type="TextureRect" parent="." unique_id=58717720]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("6_f3rtg")
+expand_mode = 1
+
+[node name="Master" type="TextureRect" parent="." unique_id=1500711808]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("7_lqyu8")
+expand_mode = 1
+
+[node name="NextButton" type="Button" parent="." unique_id=533307909]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="DialoguePanel" type="Panel" parent="." unique_id=1311653184]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="DialoguePanel" unique_id=1525551224]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0
+
+[node name="DialogueText" type="RichTextLabel" parent="DialoguePanel" unique_id=549155407]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressLabel" type="Label" parent="." unique_id=2020996343]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1845815170]
+
+[node name="PlaceSfx" type="AudioStreamPlayer2D" parent="." unique_id=1442147015]
+
+[node name="CompleteSfx" type="AudioStreamPlayer2D" parent="." unique_id=1316130338]
+
+[node name="Bgm" type="AudioStreamPlayer2D" parent="." unique_id=2105789869]

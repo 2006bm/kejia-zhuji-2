@@ -1,0 +1,14 @@
+CanvasLayer
+Sprite2D
+VideoStreamPlayer
+AnimatedSprite2D
+TextureRect
+Timer
+CollisionShape2D
+Area2D
+AnimationPlayer
+AudioStreamPlayer2D
+Label
+RichTextLabel
+Panel
+Button

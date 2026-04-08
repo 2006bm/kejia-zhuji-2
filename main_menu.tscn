@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg5052cguw14"]
+
+[ext_resource type="Script" uid="uid://b8drfqhc45264" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://cruc8abdh33vw" path="res://image/微信图片_20260323181441_7_1155.png" id="2_fu7sn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.0
+offset_top = -33.0
+offset_right = 91.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fu7sn")
+expand_mode = 1
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 314.0
+offset_right = 858.0
+offset_bottom = 367.0
+
+[node name="quitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 413.0
+offset_right = 857.0
+offset_bottom = 463.0
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bpvbcvrvcntm0"]
+
+[ext_resource type="Script" uid="uid://cfwdidmnx36wr" path="res://juanzhou_map.gd" id="1_5piuv"]
+[ext_resource type="Texture2D" uid="uid://bexlrq72wyojo" path="res://image/微信图片_20260323181440_5_1155.png" id="1_m2pwv"]
+
+[node name="ScrollRoot" type="Control" unique_id=376087471]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5piuv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=340729633]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_left = -18.0
+offset_top = 31.0
+offset_right = 1262.0
+offset_bottom = 751.0
+texture = ExtResource("1_m2pwv")
+expand_mode = 1
+
+[node name="NodePoints" type="Control" parent="." unique_id=1625272748]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node1" type="Button" parent="NodePoints" unique_id=146565257]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 191.0
+offset_right = 643.0
+offset_bottom = 336.0
+
+[node name="Node2" type="Button" parent="NodePoints" unique_id=1846234789]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 81.0
+offset_right = 281.0
+offset_bottom = 226.0
+
+[node name="Node3" type="Button" parent="NodePoints" unique_id=1247475156]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 372.0
+offset_right = 292.0
+offset_bottom = 529.0
+
+[node name="Node4" type="Button" parent="NodePoints" unique_id=1290079465]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 312.0
+offset_right = 1018.0
+offset_bottom = 464.0
+
+[node name="Node5" type="Button" parent="NodePoints" unique_id=1492180869]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 551.0
+offset_right = 883.0
+offset_bottom = 694.0
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1397199231]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0
+
+[node name="TipLabel" type="Label" parent="." unique_id=1363304398]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0

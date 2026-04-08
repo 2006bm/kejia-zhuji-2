@@ -1,0 +1,27 @@
+# Godot 自动生成的临时文件（核心！）
+*.import
+*.uid
+*.remap
+.import/
+
+# C#/Mono相关（用GDScript可保留，用C#必须加）
+.mono/
+GodotSharp/
+obj/
+bin/
+*.csproj
+*.sln
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE/编辑器配置
+.vscode/
+.idea/
+
+# 导出的游戏安装包
+*.exe
+*.apk
+*.zip

@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn2ftyteo6soi"]
+
+[ext_resource type="Texture2D" uid="uid://box51awqjs7m6" path="res://image/ip形象/maven/dialog2.png" id="2_pbv0f"]
+[ext_resource type="FontFile" uid="uid://knljqyfbbue7" path="res://assets/fonts/XuanZongTi-v0.1.otf" id="3_1qsbp"]
+[ext_resource type="Texture2D" uid="uid://1xgu31vfetnj" path="res://image/diao2.png" id="4_kgtak"]
+[ext_resource type="Texture2D" uid="uid://d3d3jynh8l261" path="res://image/ip形象/小女孩1.png" id="5_pixe2"]
+
+[node name="Control" type="Control"]
+self_modulate = Color(1, 1, 1, 0.99607843)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 490.0
+offset_right = -20.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="DialoguePanel" type="Panel" parent="."]
+layout_mode = 1
+offset_right = 23.0
+mouse_filter = 1
+
+[node name="DialogueBg" type="TextureRect" parent="DialoguePanel"]
+self_modulate = Color(1, 1, 1, 0.60784316)
+custom_minimum_size = Vector2(1280, 480)
+layout_mode = 0
+offset_left = -90.0
+offset_top = -114.0
+offset_right = 1245.0
+offset_bottom = 366.0
+texture = ExtResource("2_pbv0f")
+expand_mode = 1
+
+[node name="NameLabel" type="Label" parent="DialoguePanel"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 24.0
+offset_right = 223.0
+offset_bottom = 90.0
+text = "主角"
+horizontal_alignment = 1
+
+[node name="DialogueText" type="Label" parent="DialoguePanel"]
+custom_minimum_size = Vector2(700, 150)
+layout_mode = 0
+offset_left = 157.0
+offset_top = 8.0
+offset_right = 995.0
+offset_bottom = 158.0
+theme_override_fonts/font = ExtResource("3_1qsbp")
+theme_override_font_sizes/font_size = 36
+text = "这些密密麻麻的小孔是干嘛的？"
+vertical_alignment = 2
+
+[node name="NextButton" type="Button" parent="DialoguePanel"]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 131.0
+offset_right = 1240.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 37
+text = "继续"
+
+[node name="Mink" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 0
+offset_left = -13.0
+offset_top = -31.0
+offset_right = 168.0
+offset_bottom = 215.0
+texture = ExtResource("4_kgtak")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Protagonist" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 985.0
+offset_top = -185.0
+offset_right = 1210.0
+offset_bottom = 230.0
+texture = ExtResource("5_pixe2")
+expand_mode = 1

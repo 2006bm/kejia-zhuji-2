@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwpdky4y1wjsi"]
+
+[ext_resource type="Texture2D" uid="uid://cbrhm6v8e0a6s" path="res://image/场景五/土匪1.png" id="1_dtqqt"]
+[ext_resource type="Script" uid="uid://bnjr7j42f61h7" path="res://scenes/bandit.gd" id="1_l2n3t"]
+[ext_resource type="Texture2D" uid="uid://c1s5qbli5r3y5" path="res://image/场景五/土匪2.png" id="3_xby2g"]
+[ext_resource type="Texture2D" uid="uid://6tyhpng7ku43" path="res://image/场景五/土匪3.png" id="4_3nkud"]
+[ext_resource type="Texture2D" uid="uid://b4k56wnqqhf6p" path="res://image/场景五/土匪4.png" id="5_dyeo6"]
+[ext_resource type="Texture2D" uid="uid://dibtu2kjiun37" path="res://image/场景五/土匪5.png" id="6_q8olk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xby2g"]
+radius = 43.64917
+
+[node name="Bandit" type="Area2D"]
+script = ExtResource("1_l2n3t")
+
+[node name="Bandit_1" type="Sprite2D" parent="."]
+position = Vector2(243.00003, 237.00002)
+scale = Vector2(0.22083335, 0.2080078)
+texture = ExtResource("1_dtqqt")
+
+[node name="Bandit_2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(86, 263)
+scale = Vector2(0.24190538, 0.25022784)
+texture = ExtResource("3_xby2g")
+
+[node name="Bandit_3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(386.50003, 250.50003)
+scale = Vector2(0.2440972, 0.23177083)
+texture = ExtResource("4_3nkud")
+
+[node name="Bandit_4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(182.99998, 254.99998)
+scale = Vector2(0.2513889, 0.21458334)
+texture = ExtResource("5_dyeo6")
+
+[node name="Bandit_5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(261.49997, 244.5)
+scale = Vector2(0.2920139, 0.21406251)
+texture = ExtResource("6_q8olk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(240, 172)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_xby2g")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

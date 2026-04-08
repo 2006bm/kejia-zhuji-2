@@ -1,0 +1,6 @@
+res://scenes/ShootingHoleGame.tscn
+res://scenes/Bandit.tscn
+res://scenes/bandit.gd
+res://scenes/shooting_hole_game.gd
+res://scenes/tulou_interior.tscn
+res://scenes/tulou_interior.gd

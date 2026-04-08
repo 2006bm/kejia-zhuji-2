@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmhdjef2yfy1r"]
+
+[ext_resource type="Script" uid="uid://h2b352xgwla3" path="res://scenes/bamboo_scene.gd" id="1_hdu4d"]
+[ext_resource type="FontFile" uid="uid://knljqyfbbue7" path="res://assets/fonts/XuanZongTi-v0.1.otf" id="2_uymrd"]
+[ext_resource type="Texture2D" uid="uid://dwkgguqm207vf" path="res://image/dialog1.png" id="2_v8msx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 477.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdu4d")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="DialoguePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 33.28
+
+[node name="DialogueBg" type="TextureRect" parent="DialoguePanel"]
+custom_minimum_size = Vector2(1280, 480)
+layout_mode = 0
+offset_left = -432.0
+offset_top = -532.0
+offset_right = 1948.0
+offset_bottom = 571.0
+texture = ExtResource("2_v8msx")
+expand_mode = 1
+
+[node name="NameLabel" type="Label" parent="DialoguePanel"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = -32.0
+offset_right = 271.0
+offset_bottom = 50.0
+text = "小貂："
+
+[node name="DialogueText" type="Label" parent="DialoguePanel"]
+custom_minimum_size = Vector2(700, 150)
+layout_mode = 0
+offset_left = 293.0
+offset_top = -65.0
+offset_right = 1049.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_uymrd")
+theme_override_font_sizes/font_size = 36
+vertical_alignment = 2
+
+[node name="NextButton" type="Button" parent="DialoguePanel"]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 131.0
+offset_right = 1240.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 37
+text = "继续"
+
+[node name="Mink" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 1000.0

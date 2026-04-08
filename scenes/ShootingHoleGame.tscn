@@ -1,0 +1,259 @@
+[gd_scene load_steps=11 format=3 uid="uid://uxfais0las7"]
+
+[ext_resource type="Script" uid="uid://bs3xdc7qf3a8g" path="res://scenes/shooting_hole_game.gd" id="1_0tp8w"]
+[ext_resource type="Texture2D" uid="uid://cnar00fdd3qae" path="res://image/场景五/射击1.jpg" id="1_prm8t"]
+[ext_resource type="Texture2D" uid="uid://d4ibhwxsu44v7" path="res://image/场景五/射击2.jpg" id="2_0r8bx"]
+[ext_resource type="Texture2D" uid="uid://ccfqsswjilijp" path="res://image/场景五/射击3.jpg" id="3_obk15"]
+[ext_resource type="Texture2D" uid="uid://drnp2lo0bkui6" path="res://image/场景五/黑色遮罩1.png" id="4_0r8bx"]
+[ext_resource type="PackedScene" uid="uid://bn2ftyteo6soi" path="res://dialog5.tscn" id="6_ky21f"]
+[ext_resource type="Texture2D" uid="uid://dtjldabxolelt" path="res://image/场景五/星标.png" id="8_l08kl"]
+
+[sub_resource type="Animation" id="Animation_ky21f"]
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ExteriorWall:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InsideView:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ExteriorWall:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HoleCloseup:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InsideView/MaskLayer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HoleCloseup:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_abd0i"]
+resource_name = "zoom_in"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("ExteriorWall:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666672, 2.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InsideView:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667, 1.54, 2.8666663, 2.9099996),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.38545454), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("ExteriorWall:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.06666672, 2.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HoleCloseup:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.06666672, 1.0333333, 1.59, 2.9699996),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InsideView/MaskLayer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.54, 1.5666667, 2.8999999, 2.9099996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HoleCloseup:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.06666672, 2.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0tp8w"]
+_data = {
+&"RESET": SubResource("Animation_ky21f"),
+&"zoom_in": SubResource("Animation_abd0i")
+}
+
+[node name="ShootingHoleGame" type="Node2D"]
+script = ExtResource("1_0tp8w")
+
+[node name="ExteriorWall" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 643.0
+offset_bottom = 363.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_prm8t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HoleCloseup" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.53
+offset_bottom = 718.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0r8bx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InsideView" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_obk15")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MaskLayer" type="TextureRect" parent="InsideView"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0r8bx")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("6_ky21f")]
+
+[node name="NextButton" parent="CanvasLayer/Control/DialoguePanel" index="3"]
+offset_left = 1131.0
+offset_right = 1242.0
+
+[node name="Protagonist" parent="CanvasLayer/Control" index="3"]
+offset_left = 987.0
+offset_top = -196.0
+offset_right = 1212.0
+offset_bottom = 219.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0tp8w")
+}
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 39.232
+one_shot = true
+
+[node name="Crosshair" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(-1, 0)
+scale = Vector2(0.13871525, 0.13587238)
+texture = ExtResource("8_l08kl")
+
+[connection signal="pressed" from="CanvasLayer/Control/DialoguePanel/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+
+[editable path="CanvasLayer/Control"]

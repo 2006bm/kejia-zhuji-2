@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://svq1uxes4hfr"]
+
+[ext_resource type="VideoStream" uid="uid://ddmfea0jmtex0" path="res://assets/changjing-2_1 (1).ogv" id="1_72v3x"]
+[ext_resource type="Script" uid="uid://ch4urveivk7tb" path="res://scenes/transition_video.gd" id="1_k3tai"]
+
+[node name="transition_video_gd" type="Control" unique_id=1420789712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k3tai")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=921350204]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1277.0
+offset_bottom = 718.0
+stream = ExtResource("1_72v3x")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_video_player_finished"]

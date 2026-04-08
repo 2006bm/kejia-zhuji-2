@@ -1,0 +1,425 @@
+[gd_scene format=3 uid="uid://p40p67jh6pid"]
+
+[ext_resource type="Script" uid="uid://pnkha8c15rh6" path="res://scenes/reading_room.gd" id="1_6t7pk"]
+[ext_resource type="Texture2D" uid="uid://cqy6h8r5dtyf1" path="res://image/bookpage1.jpg" id="1_x3lxe"]
+[ext_resource type="Texture2D" uid="uid://2dd667h8esef" path="res://image/bookpage2.jpg" id="2_6t7pk"]
+[ext_resource type="VideoStream" uid="uid://dhxrkb5teogec" path="res://image/1.ogv" id="2_d3180"]
+[ext_resource type="Texture2D" uid="uid://ixl71iw70wh8" path="res://image/bookpage3.jpg" id="3_d3180"]
+[ext_resource type="Texture2D" uid="uid://dh7kvohwwwro3" path="res://image/button1.png" id="6_gf2ao"]
+[ext_resource type="Texture2D" uid="uid://dwkgguqm207vf" path="res://image/dialog1.png" id="7_fyglm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyglm"]
+atlas = ExtResource("6_gf2ao")
+region = Rect2(1252.367, 598.8056, 582.4133, 587.34344)
+
+[sub_resource type="Animation" id="Animation_kgcyr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookLayers/Page1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/DialogueBox/Text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BookLayers/Page2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BookLayers/Page3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SceneFader:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/DialogueBox/Text:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["福建土楼：世界文化遗产，被称为‘东方古城堡"]
+}
+
+[sub_resource type="Animation" id="Animation_uctng"]
+resource_name = "final_transition"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneFader:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/DialogueBox/Text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_scene"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/DialogueBox/Text:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["要是能亲眼看看就好了……", "要是能亲眼看看就好了……"]
+}
+
+[sub_resource type="Animation" id="Animation_vh274"]
+resource_name = "show_page_1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookLayers/Page1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/DialogueBox/Text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.49),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/DialogueBox/Text:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["福建土楼：世界文化遗产，被称为‘东方古城堡", "福建土楼：世界文化遗产，被称为‘东方古城堡"]
+}
+
+[sub_resource type="Animation" id="Animation_0miiq"]
+resource_name = "show_page_2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookLayers/Page2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/DialogueBox/Text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/DialogueBox/Text:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.48),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["夯土墙……榫卯结构……聚族而居……", "夯土墙……榫卯结构……聚族而居……"]
+}
+
+[sub_resource type="Animation" id="Animation_0kwvl"]
+resource_name = "show_page_3"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookLayers/Page3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/DialogueBox/Text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/DialogueBox/Text:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.48),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["光看图片好像也没什么感觉……", "光看图片好像也没什么感觉……"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1f4vj"]
+_data = {
+&"RESET": SubResource("Animation_kgcyr"),
+&"final_transition": SubResource("Animation_uctng"),
+&"show_page_1": SubResource("Animation_vh274"),
+&"show_page_2": SubResource("Animation_0miiq"),
+&"show_page_3": SubResource("Animation_0kwvl")
+}
+
+[node name="ReadingRoom" type="Control" unique_id=618878185]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6t7pk")
+
+[node name="BackgroundVideo" type="VideoStreamPlayer" parent="." unique_id=832627470]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_d3180")
+autoplay = true
+expand = true
+
+[node name="BookLayers" type="CanvasGroup" parent="." unique_id=2009430778]
+
+[node name="Page1" type="TextureRect" parent="BookLayers" unique_id=202329650]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -500.0
+offset_right = 1279.0
+offset_bottom = 1206.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x3lxe")
+stretch_mode = 5
+
+[node name="Page2" type="TextureRect" parent="BookLayers" unique_id=1355339589]
+modulate = Color(1, 1, 1, 0)
+offset_top = -350.0
+offset_right = 1279.0
+offset_bottom = 1356.0
+texture = ExtResource("2_6t7pk")
+
+[node name="Page3" type="TextureRect" parent="BookLayers" unique_id=176030547]
+modulate = Color(1, 1, 1, 0)
+offset_left = 5.0
+offset_top = -450.0
+offset_right = 1284.0
+offset_bottom = 1256.0
+texture = ExtResource("3_d3180")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1916092754]
+
+[node name="SkipButton" type="Button" parent="UI" unique_id=280162630]
+modulate = Color(1, 1, 1, 0.92156863)
+self_modulate = Color(1, 1, 1, 0.9882353)
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -110.0
+offset_right = 477.0
+offset_bottom = 496.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.2, 0.2)
+icon = SubResource("AtlasTexture_fyglm")
+flat = true
+icon_alignment = 1
+
+[node name="DialogueBox" type="NinePatchRect" parent="UI" unique_id=2105432575]
+self_modulate = Color(1, 1, 1, 0.5568628)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -440.0
+offset_top = -160.0
+offset_right = 10.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+texture = ExtResource("7_fyglm")
+region_rect = Rect2(510.824, 675.868, 1502.013, 582.413)
+patch_margin_left = 7
+patch_margin_top = 10
+patch_margin_right = 11
+patch_margin_bottom = 14
+
+[node name="Text" type="RichTextLabel" parent="UI/DialogueBox" unique_id=543008693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.5
+offset_top = 20.0
+offset_right = -42.5
+offset_bottom = -16.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = true
+text = "福建土楼：世界文化遗产，被称为‘东方古城堡"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Prompt" type="Label" parent="UI" unique_id=1676865682]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -65.0
+offset_right = -30.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.1, 1.1)
+theme_override_font_sizes/font_size = 20
+text = "点击继续"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1602384783]
+libraries/ = SubResource("AnimationLibrary_1f4vj")
+
+[node name="SceneFader" type="ColorRect" parent="." unique_id=1921824572]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="UI/SkipButton" to="." method="_on_skip_button_pressed"]

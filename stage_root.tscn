@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://kc7tfwb7ibg5"]
+
+[ext_resource type="Script" uid="uid://cfeqee4bxv2bj" path="res://scripts/stage1_site.gd" id="1_2dy1b"]
+[ext_resource type="Texture2D" uid="uid://c6teei6yfg57x" path="res://image/changjing3.jpg" id="1_w40g4"]
+[ext_resource type="Texture2D" uid="uid://daf5r8k7t6tja" path="res://image/主角1.png" id="2_vwnpt"]
+[ext_resource type="Texture2D" uid="uid://1xgu31vfetnj" path="res://image/diao2.png" id="3_2dy1b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2dy1b"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbqyh"]
+font_size = 59
+
+[node name="StageRoot" type="Control" unique_id=34680623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2dy1b")
+
+[node name="Background" type="TextureRect" parent="." unique_id=487950597]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 1275.0
+offset_bottom = 722.0
+texture = ExtResource("1_w40g4")
+expand_mode = 1
+
+[node name="CharacterLayer" type="Button" parent="." unique_id=554445413]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 631.0
+offset_right = 1357.0
+offset_bottom = 1444.0
+flat = true
+
+[node name="MainCharacter" type="Sprite2D" parent="CharacterLayer" unique_id=356186513]
+position = Vector2(381, -162.50002)
+scale = Vector2(0.4461538, 0.50753295)
+texture = ExtResource("2_vwnpt")
+
+[node name="XiaoDiao" type="Sprite2D" parent="CharacterLayer" unique_id=126727512]
+position = Vector2(-582, -121.99997)
+scale = Vector2(0.55008346, 0.47142857)
+texture = ExtResource("3_2dy1b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterLayer" unique_id=1147944207]
+
+[node name="UI" type="Control" parent="." unique_id=848806494]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialoguePanel" type="Panel" parent="UI" unique_id=1024203633]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 369.0
+offset_right = 943.0
+offset_bottom = 571.0
+
+[node name="NameLabel" type="Label" parent="UI/DialoguePanel" unique_id=1368160832]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.115
+offset_left = -15.0
+offset_top = 273.0
+offset_right = 123.0
+offset_bottom = 284.77
+text = "小貂"
+label_settings = SubResource("LabelSettings_2dy1b")
+structured_text_bidi_override_options = [null]
+
+[node name="ContentLabel" type="Label" parent="UI/DialoguePanel" unique_id=974090648]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 175.0
+label_settings = SubResource("LabelSettings_tbqyh")
+
+[node name="NextButton" type="Button" parent="UI/DialoguePanel" unique_id=790110798]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 254.0
+offset_right = 719.0
+offset_bottom = 350.0
+text = "下一句"
+
+[node name="ChoicePanel" type="Panel" parent="UI" unique_id=1545798363]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Choice1" type="Button" parent="UI/ChoicePanel" unique_id=1296116043]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 130.0
+offset_right = 318.0
+offset_bottom = 268.0
+text = "低洼地"
+
+[node name="Choice2" type="Button" parent="UI/ChoicePanel" unique_id=348028718]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 108.0
+offset_right = 636.0
+offset_bottom = 238.0
+text = "山顶"
+
+[node name="Choice3" type="Button" parent="UI/ChoicePanel" unique_id=1084941318]
+layout_mode = 0
+offset_left = 812.0
+offset_top = 136.0
+offset_right = 1121.0
+offset_bottom = 260.0
+text = "山坡"
+
+[node name="BackButton" type="Button" parent="UI" unique_id=446657439]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "返回卷轴"
